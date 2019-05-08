@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://i.imgur.com/hViW80o.png"/>
+    <link rel="stylesheet" href="checkout-style.css">
+    <title>Checkout Form</title>
+  </head>
+  <body class="bg-light">
+  <header class="text-center mx-auto mt-5 py-5">
+        <div class="container">
+                <img class="my-2" src="https://i.imgur.com/hViW80o.png" alt="CS-logo"/>
+                <h1 class="display-4 mb-4 text-danger font-weight-normal">
+                  Checkout Form
+                </h1>
+                <p class="lead">
+                  Below is an example form build entirely with Bootstrap's form controls. Each required form has a validation state that can be triggered by attempting to submit the form without completing it.
+                </p>
+              </div>
+  </header>
+  <!-- <form> -->
+      <div class="container d-flex">
+          <div class="bill-container col-8">
+              <div class="bill-row">
+                  <p class="font-weight-bold">Billing Address</p>
+              </div>
+              <br>
+              <div class="form-row row">
+                  <div class="col">
+                    <label for="InputFName">First Name</label>
+                    <input type="name" class="form-control" id="InputFName">
+                  </div>             
+                  <div class="col">
+                    <label for="InputLName">Last Name</label>
+                    <input type="name" class="form-control" id="InputLName">
+                  </div>
+              </div>
+              <br>
+              <div class="username-row">
+                    <label for="validationCustomUsername">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+              </div>
+              <br>
+              <div class="email-row">
+                  <label for="inputemail">Email</label> <span><label style="color:silver">(Optional)</label></span>
+                  <input type="email" class="form-control" id="InputEmail" placeholder="you@example.com">
+              </div>
+              <br>
+              <div class="address1-row">
+                    <label for="inputaddress1">Address</label>
+                    <input type="text" class="form-control" id="inputaddress1" placeholder="1234 Main St">
+              </div>
+              <br>
+              <div class="address2-row">
+                    <label for="inputaddress1">Address 2</label> <span><label style="color:silver">(Optional)</label></span>
+                    <input type="text" class="form-control" id="inputaddress1" placeholder="Apartment or Suite">
+              </div>
+              <br>
+              <div class="country-row row">
+                    <div class="form-group col-6">
+                        <label for="inputCountry">Country</label>
+                        <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-4">
+                         <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-2">
+                        <label for="inputZip">Zip</label>
+                         <input type="text" class="form-control" id="inputZip">
+                    </div>
+              </div>
+              <br>
+              <div class="shipping-row">
+                    <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Shipping address is the same as my billing address</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Save this information for next time</label>
+                    </div>
+              </div>
+              <br>
+              <br>
+              <div class="payment-row">
+                  <p class="font-weight-bold">Payment</p>
+              </div>
+              <div class="payment-methol-row">
+                    <div class="custom-control custom-radio">
+                            <input type="radio" id="Credit-Card" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="Credit-Card">Credit Card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                            <input type="radio" id="Debit-card" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="Debit-card">Debit Card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                            <input type="radio" id="Paypal" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio3">Paypal</label>
+                    </div>
+              </div>
+              <div class="card-row row">
+                <div class="name-on-card col">
+                    <label>Name on card</label>
+                    <input class="form-control">
+                    <small id="cardhelp" class="text-muted">Full name as displayed on card</small>
+                </div>
+                <div class="cc-number col">
+                    <label>Credit card number</label>
+                    <input class="form-control">
+                </div>
+              </div>
+              <br>
+              <div class="card2-row row">
+                  <div class="expiration col-3">
+                      <label>Expiration</label>
+                      <input class="form-control">
+                  </div>
+                  <div class="ccv col-3">
+                      <label>CCV</label>
+                      <input class="form-control">
+                  </div>    
+              </div>
+              <br>
+              <div class="btn-checkout">
+                  <button type="button" class="btn btn-danger btn-lg btn-block">Continue to checkout</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-container col-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="font-weight-bold text-muted">Your Cart</span>
+                        <span class="badge badge-pill badge-secondary">3</span>
+                </div>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                        <h6 class="my-0">Product name</h6>
+                        <small class="text-muted">Web Design Bootcamp</small>
+                      </div>
+                      <span class="text-muted">4.9 M</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                        <h6 class="my-0">Second product</h6>
+                        <small class="text-muted">React + React Native</small>
+                      </div>
+                      <span class="text-muted">14.9 M</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                        <h6 class="my-0">Third item</h6>
+                        <small class="text-muted">Machine Learning</small>
+                      </div>
+                      <span class="text-muted">14.9 M</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                      <div class="text-success">
+                        <h6 class="my-0">Promo code</h6>
+                        <small>EXAMPLECODE</small>
+                      </div>
+                      <span class="text-success">- 7.5 M</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                      <span>Total (VND)</span>
+                      <strong>27.2</strong>
+                    </li>
+                  </ul>
+                    <form class="card p-2"> 
+                     <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Promo code">
+                          <div class="btn-promo">
+                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                          </div>
+                      </div>
+                    </form>
+          </div>
+
+          
+      </div>
+  <!-- </form> -->
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md">
+                        <img class="mb-2" src="https://i.imgur.com/hViW80o.png" alt="" width="24" height="24">
+                        <small class="d-block mb-3 text-muted">&copy; 2018-2019</small>
+                  </div>
+                  <div class="col-6 col-md"><h5>Features</h5>
+                    <ul; class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Cool stuff</a></li>
+                            <li><a class="text-muted" href="#">Random feature</a></li>
+                            <li><a class="text-muted" href="#">Team feature</a></li>
+                            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                            <li><a class="text-muted" href="#">Another one</a></li>
+                            <li><a class="text-muted" href="#">Last time</a></li>
+                          </ul></div>
+                  <div class="col-6 col-md"><h5>Resources</h5><ul; class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">VOZ Forum</a></li>
+                        <li><a class="text-muted" href="#">Chuyện trò linh tinh™ </a></li>
+                      </ul></div>
+                  <div class="col-6 col-md"><h5>About</h5><ul; class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">hihi</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                      </ul></div>
+                </div>
+              </div>
+  </footer>
+  </body>
+</html>
